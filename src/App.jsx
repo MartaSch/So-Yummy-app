@@ -1,35 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import { useState } from 'react';
+import './App.css';
+import Start from './components/start/Start';
+import Registration from './components/Registration/Registration';
+import SignIn from './components/SignIn/SignIn';
+import { Route, Routes } from 'react-router-dom';
+export const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Routes>
+      <Route path="/So-Yummy-app/" element={<Start />} />
+      <Route path="/So-Yummy-app/registration" element={<Registration />} />
+      <Route path="/So-Yummy-app/signin" element={<SignIn />} />
+    </Routes> 
+    /* Taki zapis pozwala przechodzić do kolejnych podstron w przeglądarce */
+     </>
   )
 }
-
-export default App
