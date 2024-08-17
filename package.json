@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node vite. config.js",
+    "start": "node vite.config.js",
     "predeploy": "npm run build",
     "dev": "vite",
     "build": "vite build",
